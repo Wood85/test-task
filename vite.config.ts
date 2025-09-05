@@ -1,24 +1,12 @@
-import react from "@vitejs/plugin-react";
-import path from "path";
 import { defineConfig } from "vite";
+import path from "path";
+import react from "@vitejs/plugin-react";
 
-const aliasList = [
-  "assets",
-  "components",
-  "config",
-  "layouts",
-  "lib",
-  "pages",
-  "routes",
-  "styles",
-  "app-types",
-  "utils",
-];
+const aliasList = ["app", "entities", "features", "pages", "shared", "widgets"];
 
 const alias = aliasList.reduce(
   (acc, name) => {
-    const dir = name === "app-types" ? "src/types" : `src/${name}`;
-    acc[`@${name}`] = path.resolve(__dirname, dir);
+    acc[`@${name}`] = path.resolve(__dirname, `src/${name}`);
     return acc;
   },
   {} as Record<string, string>,

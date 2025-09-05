@@ -9,16 +9,12 @@
     "skipLibCheck": true,
     "types": ["node"],
     "paths": {
-      "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"],
-      "@config/*": ["src/config/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@lib/*": ["src/lib/*"],
+      "@app/*": ["src/app/*"],
+      "@entities/*": ["src/entities/*"],
+      "@features/*": ["src/features/*"],
       "@pages/*": ["src/pages/*"],
-      "@routes/*": ["src/routes/*"],
-      "@styles/*": ["src/styles/*"],
-      "@app-types/*": ["src/types/*"],
-      "@utils/*": ["src/utils/*"],
+      "@shared/*": ["src/shared/*"],
+      "@widgets/*": ["src/widgets/*"]
     },
 
     /* Bundler mode */
