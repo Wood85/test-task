@@ -1,0 +1,12 @@
+@use "@styles/_variables" as *;
+@use "@styles/_functions" as *;
+
+.page {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: color(gray);
+}

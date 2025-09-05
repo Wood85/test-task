@@ -1,0 +1,14 @@
+@use "@styles/_variables" as *;
+@use "sass:map";
+
+@function color($name) {
+  @return map.get($colors, $name);
+}
+
+// @function font-size-desktop($name) {
+//   @return map.get($font-sizes-desktop, $name);
+// }
+
+// @function font-size-mobile($name) {
+//   @return map.get($font-sizes-mobile, $name);
+// }

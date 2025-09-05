@@ -1,10 +1,6 @@
 import { MainPage } from "@pages/MainPage";
 
 function App() {
-  return (
-    <>
-      <MainPage />
-    </>
-  );
+  return <MainPage />;
 }
 export default App;

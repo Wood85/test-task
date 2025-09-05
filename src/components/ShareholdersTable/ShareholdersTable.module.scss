@@ -1,0 +1,61 @@
+@use "@styles/_variables" as *;
+@use "@styles/_functions" as *;
+
+.table {
+  :global {
+    .ant-table-wrapper {
+      border-radius: 0 12px 12px 0;
+      overflow: hidden;
+    }
+
+    .ant-table {
+      border-radius: 12px;
+      overflow: hidden;
+      font-family: 'Montserrat', sans-serif;
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    .ant-table-thead > tr > th {
+      background: color(primary);
+      color: color(light);
+      font-weight: 700;
+      text-align: left;
+      padding: 23.5px 16px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0%;
+      border-right: 1px solid color(border-header-table);
+      border-bottom: 1px solid color(primary);
+    }
+
+    .ant-table-tbody > tr > td {
+      background: color(background-table);
+      padding: 16px;
+      border-top: 1px solid color(border-table);
+      border-right: 1px solid color(border-table);
+    }
+
+    .ant-table-tbody > tr:last-child > td {
+      border-bottom: none;
+    }
+
+    .ant-table-thead > tr > th::before,
+    .ant-table-thead > tr > td::before {
+      content: none !important;
+    }
+  }
+
+  .holder {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.2%;
+  }  
+  .share {
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+  }
+}
