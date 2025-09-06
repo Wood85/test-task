@@ -1,41 +1,34 @@
-import { defineConfig } from "vite";
-import path from "path";
-import react from "@vitejs/plugin-react";
+import react from '@vitejs/plugin-react';
+import path from 'path';
+import { defineConfig } from 'vite';
 
-const aliasList = [
-  "app",
-  "components",
-  "data",
-  "definitions",
-  "pages",
-  "styles",
-];
+const aliasList = ['app', 'components', 'data', 'definitions', 'hooks', 'pages', 'styles'];
 
 const alias = aliasList.reduce(
   (acc, name) => {
     acc[`@${name}`] = path.resolve(__dirname, `src/${name}`);
     return acc;
   },
-  {} as Record<string, string>,
+  {} as Record<string, string>
 );
 
 export default defineConfig({
   server: {
-    fs: {},
+    fs: {}
   },
   plugins: [react()],
   resolve: {
-    alias,
+    alias
   },
   css: {
     preprocessorOptions: {
-      scss: {},
+      scss: {}
     },
-    devSourcemap: true,
+    devSourcemap: true
   },
   build: {
     rollupOptions: {
-      treeshake: true,
-    },
-  },
+      treeshake: true
+    }
+  }
 });

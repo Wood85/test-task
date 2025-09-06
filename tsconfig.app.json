@@ -13,6 +13,7 @@
       "@components/*": ["src/components/*"],
       "@data/*": ["src/data/*"],
       "@definitions/*": ["src/definitions/*"],
+      "@hooks/*": ["src/hooks/*",],
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
     },

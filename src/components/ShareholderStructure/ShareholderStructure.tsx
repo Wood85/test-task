@@ -1,6 +1,6 @@
-import { ShareholdersTable, UpdateDate, Chart } from "@components/index";
+import { ShareholdersTable, UpdateDate, Chart } from '@components/index';
 
-import styles from "./ShareholderStructure.module.scss";
+import styles from './ShareholderStructure.module.scss';
 
 export const ShareholderStructure = () => {
   return (
@@ -12,7 +12,9 @@ export const ShareholderStructure = () => {
           <UpdateDate />
         </div>
         <div className={styles.chartContainer}>
-          <Chart />
+          <div className={styles.chartWrap}>
+            <Chart />
+          </div>
         </div>
       </div>
     </section>
