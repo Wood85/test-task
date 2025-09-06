@@ -32,3 +32,30 @@
   gap: 12px;
   width: 53.34%;
 }
+
+.chartContainer {
+  width: 44.33%;
+  height: 349px;
+  padding: 24px 32px;
+  border-radius: 16px;
+  border: 1px solid color(border-color)
+}
+
+@media (max-width:1440px) {
+
+  .block {
+    max-width: 800px;
+  }
+  .infoContainer {
+    flex-direction: column;
+  }
+
+  .tableContainer {
+  width: 100%;
+}
+
+.chartContainer {
+  width: 100%;
+
+}
+}

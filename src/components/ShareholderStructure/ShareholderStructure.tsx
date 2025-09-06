@@ -1,4 +1,4 @@
-import { ShareholdersTable, UpdateDate } from "@components/index";
+import { ShareholdersTable, UpdateDate, Chart } from "@components/index";
 
 import styles from "./ShareholderStructure.module.scss";
 
@@ -11,7 +11,9 @@ export const ShareholderStructure = () => {
           <ShareholdersTable />
           <UpdateDate />
         </div>
-        <div className={styles.chart}></div>
+        <div className={styles.chartContainer}>
+          <Chart />
+        </div>
       </div>
     </section>
   );
