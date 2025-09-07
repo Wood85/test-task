@@ -1,19 +1,25 @@
 import { ShareholdersTable, UpdateDate, Chart } from '@components/index';
+import { MAIN_TITLE } from '@data/titles';
+import type { NormalizedShareholder } from '@definitions/shareholder';
 
 import styles from './ShareholderStructure.module.scss';
 
-export const ShareholderStructure = () => {
+interface ShareholderStructureProps {
+  data: NormalizedShareholder[];
+}
+
+export const ShareholderStructure = ({ data }: ShareholderStructureProps) => {
   return (
     <section className={styles.block}>
-      <h1 className={styles.title}>Структура акционеров</h1>
+      <h1 className={styles.title}>{MAIN_TITLE}</h1>
       <div className={styles.infoContainer}>
         <div className={styles.tableContainer}>
-          <ShareholdersTable />
+          <ShareholdersTable data={data} />
           <UpdateDate />
         </div>
         <div className={styles.chartContainer}>
           <div className={styles.chartWrap}>
-            <Chart />
+            <Chart shareholders={data} />
           </div>
         </div>
       </div>

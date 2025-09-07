@@ -2,7 +2,17 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig } from 'vite';
 
-const aliasList = ['app', 'components', 'data', 'definitions', 'hooks', 'pages', 'styles'];
+const aliasList = [
+  'app',
+  'components',
+  'data',
+  'definitions',
+  'hooks',
+  'pages',
+  'services',
+  'styles',
+  'utils'
+];
 
 const alias = aliasList.reduce(
   (acc, name) => {
