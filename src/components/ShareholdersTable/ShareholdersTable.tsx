@@ -1,13 +1,18 @@
-import { dataSource, getColumns } from '@data/tableData';
+import { getColumns } from '@data/tableData';
+import type { NormalizedShareholder } from '@definitions/shareholder';
 import { Table } from 'antd';
 
 import styles from './ShareholdersTable.module.scss';
 
-export const ShareholdersTable = () => {
+interface ShareholdersTableProps {
+  data: NormalizedShareholder[];
+}
+
+export const ShareholdersTable = ({ data }: ShareholdersTableProps) => {
   return (
     <Table
       className={styles.table}
-      dataSource={dataSource}
+      dataSource={data}
       columns={getColumns(styles.holder, styles.share)}
       pagination={false}
       bordered={false}

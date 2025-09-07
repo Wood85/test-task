@@ -1,18 +1,25 @@
 import { CustomLegend } from '@components/index';
 import { baseColors } from '@data/chartBaseColors';
+import type { NormalizedShareholder } from '@definitions/shareholder';
 import { useDoughnutChart } from '@hooks/useDoughnutChart';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 
 import styles from './Chart.module.scss';
 
+interface ChartProps {
+  shareholders: NormalizedShareholder[];
+}
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const Chart: React.FC = () => {
+export const Chart = ({ shareholders }: ChartProps) => {
+  const labels = shareholders.map((shareholder) => shareholder.holder);
+  const percents = shareholders.map((shareholder) => shareholder.share_percent);
+
   const data = {
-    labels: ['Группа ИнтерРАО', 'Free Float', 'Роснефтегаз', 'ФСК ЕЭС'],
-    datasets: [{ data: [50, 25, 15, 10], backgroundColor: [...baseColors], borderWidth: 0 }]
+    labels: [...labels],
+    datasets: [{ data: [...percents], backgroundColor: [...baseColors], borderWidth: 0 }]
   };
 
   const { chartRef, options } = useDoughnutChart(baseColors);
