@@ -1,4 +1,4 @@
-import { ShareholdersTable, UpdateDate, Chart } from '@components/index';
+import { ShareholdersTable, UpdatedDate, Chart } from '@components/index';
 import { MAIN_TITLE } from '@data/titles';
 import type { NormalizedShareholder } from '@definitions/shareholder';
 
@@ -15,7 +15,7 @@ export const ShareholderStructure = ({ data }: ShareholderStructureProps) => {
       <div className={styles.infoContainer}>
         <div className={styles.tableContainer}>
           <ShareholdersTable data={data} />
-          <UpdateDate />
+          <UpdatedDate />
         </div>
         <div className={styles.chartContainer}>
           <div className={styles.chartWrap}>
