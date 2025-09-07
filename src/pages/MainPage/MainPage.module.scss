@@ -1,5 +1,5 @@
-@use "@styles/_variables" as *;
-@use "@styles/_functions" as *;
+@use '@styles/_variables' as *;
+@use '@styles/_functions' as *;
 
 .page {
   display: flex;
@@ -8,6 +8,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: color(gray);
+  background-color: color(light-gray);
   padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page {
+    padding: 50px 0;
+  }
 }

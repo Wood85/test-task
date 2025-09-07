@@ -1,5 +1,5 @@
-@use "@styles/_variables" as *;
-@use "@styles/_functions" as *;
+@use '@styles/_variables' as *;
+@use '@styles/_functions' as *;
 
 .table {
   :global {
@@ -30,14 +30,16 @@
       border-bottom: 1px solid color(primary);
     }
 
-    .ant-table-tbody > tr > td {
+    .ant-table-tbody > tr > td.leftCol,
+    .ant-table-tbody > tr > td.rightCol {
       background: color(background-table);
-      padding: 16px;
+      padding: 14px 16px;
       border-top: 1px solid color(border-table);
       border-right: 1px solid color(border-table);
     }
 
-    .ant-table-tbody > tr:last-child > td {
+    .ant-table-tbody > tr:last-child > td.leftCol,
+    .ant-table-tbody > tr:last-child > td.rightCol {
       border-bottom: none;
     }
 
@@ -51,11 +53,34 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
-    letter-spacing: 0.2%;
-  }  
+  }
   .share {
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: 0%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .table {
+    :global {
+      .ant-table-tbody > tr > td.rightCol {
+        border-right: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .table {
+    :global {
+      .ant-table-tbody > tr > td.leftCol,
+      .ant-table-thead > tr > th.leftCol {
+        width: 63.7% !important;
+      }
+      .ant-table-tbody > tr > td.rightCol,
+      .ant-table-thead > tr > th.rightCol {
+        width: 36.3% !important;
+      }
+    }
   }
 }

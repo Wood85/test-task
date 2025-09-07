@@ -1,8 +1,7 @@
-import { Table } from "antd";
+import { dataSource, getColumns } from '@data/tableData';
+import { Table } from 'antd';
 
-import { dataSource, getColumns } from "@data/tableData";
-
-import styles from "./ShareholdersTable.module.scss";
+import styles from './ShareholdersTable.module.scss';
 
 export const ShareholdersTable = () => {
   return (

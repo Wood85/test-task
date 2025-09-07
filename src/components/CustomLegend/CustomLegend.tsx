@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./CustomLegend.module.scss";
+import styles from './CustomLegend.module.scss';
 
 interface LegendProps {
   labels: string[];
@@ -12,11 +12,8 @@ export const CustomLegend: React.FC<LegendProps> = ({ labels, colors }) => {
     <div className={styles.container}>
       {labels.map((label, index) => (
         <div key={label} className={styles.item}>
-          <span
-            style={{ backgroundColor: colors[index] }}
-            className={styles.label}
-          />
-          <span className={styles.text}>{label}</span>
+          <div style={{ backgroundColor: colors[index] }} className={styles.label} />
+          <div className={styles.text}>{label}</div>
         </div>
       ))}
     </div>
