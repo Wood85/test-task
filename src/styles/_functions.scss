@@ -1,0 +1,6 @@
+@use '@styles/_variables' as *;
+@use 'sass:map';
+
+@function color($name) {
+  @return map.get($colors, $name);
+}
