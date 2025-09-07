@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 13px;
+}
+.item {
+  width: 100%;
+  display: flex;
+  gap: 19px;
+  border-bottom: 1px solid #17233929;
+  align-items: center;
+  padding-top: 4px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.label {
+  width: 11px;
+  min-width: 11px;
+  height: 11px;
+  min-height: 11px;
+  border-radius: 50%;
+  margin-bottom: 2px;
+}
+
+.text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 2px;
+    gap: 5px;
+  }
+  .item {
+    gap: 14px;
+  }
+
+  .label {
+    margin-bottom: 4px;
+  }
+}

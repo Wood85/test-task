@@ -10,11 +10,12 @@
     "types": ["node"],
     "paths": {
       "@app/*": ["src/app/*"],
-      "@entities/*": ["src/entities/*"],
-      "@features/*": ["src/features/*"],
+      "@components/*": ["src/components/*"],
+      "@data/*": ["src/data/*"],
+      "@definitions/*": ["src/definitions/*"],
+      "@hooks/*": ["src/hooks/*"],
       "@pages/*": ["src/pages/*"],
-      "@shared/*": ["src/shared/*"],
-      "@widgets/*": ["src/widgets/*"]
+      "@styles/*": ["src/styles/*"]
     },
 
     /* Bundler mode */
